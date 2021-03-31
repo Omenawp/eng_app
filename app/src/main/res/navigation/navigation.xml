@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.oelrun.english.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_unitFragment"
+            app:destination="@id/unitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unitFragment"
+        android:name="com.oelrun.english.unit.UnitFragment"
+        android:label="UnitFragment"
+        tools:layout="@layout/fragment_unit">
+        <action
+            android:id="@+id/action_unitFragment_to_dictionaryFragment"
+            app:destination="@id/dictionaryFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="unitId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_unitFragment_to_wordsGameFragment"
+            app:destination="@id/wordsGameFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_unitFragment_to_lettersGameFragment"
+            app:destination="@id/lettersGameFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/dictionaryFragment"
+        android:name="com.oelrun.english.dictionary.DictionaryFragment"
+        android:label="@string/dictionary"
+        tools:layout="@layout/fragment_dictionary">
+        <argument
+            android:name="unitId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordsGameFragment"
+        android:name="com.oelrun.english.wordsgame.WordsGameFragment"
+        tools:layout="@layout/fragment_game_words">
+        <argument
+            android:name="unitId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_wordsGameFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/unitFragment" />
+        app:popUpTo="@id/unitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.oelrun.english.result.ResultFragment"
+        tools:layout="@layout/fragment_result">
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="mistakes"
+            app:argType="string" />
+        <argument
+            android:name="total"
+            app:argType="integer" />
+        <argument
+            android:name="gameId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_resultFragment_to_wordsGameFragment"
+            app:destination="@id/wordsGameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/unitFragment" />
+        <action
+            android:id="@+id/action_resultFragment_to_lettersGameFragment"
+            app:destination="@id/lettersGameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/unitFragment" />
+        <argument
+            android:name="unitId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_resultFragment_to_unitFragment"
+            app:destination="@id/unitFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lettersGameFragment"
+        android:name="com.oelrun.english.lettersgame.LettersGameFragment"
+        tools:layout="@layout/fragment_game_letters">
+        <argument
+            android:name="unitId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_lettersGameFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/unitFragment" />
+        app:popUpTo="@id/unitFragment" />
+    </fragment>
+</navigation>

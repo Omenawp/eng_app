@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <layer-list>
+            <item android:top="10dp" android:bottom="10dp">
+                <shape>
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/gray" />
+                    <corners android:radius="10dp" />
+                </shape>
+            </item>
+            <item
+                android:height="2dp"
+                android:width="35dp"
+                android:gravity="end"
+                android:end="10dp"
+                android:top="10dp"
+                >
+                <shape>
+                    <solid android:color="@color/white" />
+                </shape>
+            </item>
+            <item
+                android:drawable="@drawable/icon_star"
+                android:height="25dp"
+                android:width="25dp"
+                android:gravity="end"
+                android:end="15dp"
+                android:top="0dp"/>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:top="10dp" android:bottom="10dp">
+                <shape>
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/violet" />
+                    <corners android:radius="10dp" />
+                </shape>
+            </item>
+            <item
+                android:height="2dp"
+                android:width="35dp"
+                android:gravity="end"
+                android:end="10dp"
+                android:top="10dp"
+                >
+                <shape>
+                    <solid android:color="@color/white" />
+                </shape>
+            </item>
+            <item
+                android:drawable="@drawable/icon_star"
+                android:height="25dp"
+                android:width="25dp"
+                android:gravity="end"
+                android:end="15dp"
+                android:top="0dp"/>
+        </layer-list>
+    </item>
+</selector>

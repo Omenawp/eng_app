@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="unit"
+            type="com.oelrun.english.database.UnitProgress" />
+        <variable
+            name="clickListener"
+            type="com.oelrun.english.home.UnitListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/unit_button"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:letterSpacing="0.1"
+            android:onClick="@{() -> clickListener.onClick(unit)}"
+            android:text="@{unit.unitName}"
+            android:textColor="@color/text_main"
+            android:textStyle="bold"
+            app:isCompleted="@{unit}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/main_item"
+            tools:text="unit name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

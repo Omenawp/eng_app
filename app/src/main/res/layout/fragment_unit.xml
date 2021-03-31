@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="unitViewModel"
+            type="com.oelrun.english.unit.UnitViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_cat_unit"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cat_unit" />
+
+        <TextView
+            android:id="@+id/text_unit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:breakStrategy="simple"
+            android:fontFamily="@font/caveat_regular"
+            android:singleLine="false"
+            android:textAlignment="center"
+            android:textColor="@color/text_main"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_cat_unit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_cat_unit"
+            app:layout_constraintTop_toTopOf="@+id/img_cat_unit"
+            tools:text="Hello everyone!" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dictionary_btn"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/unit_item"
+            android:letterSpacing="0.1"
+            android:text="@string/dictionary"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/game_1_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_cat_unit"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/game_1_btn"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:letterSpacing="0.1"
+            android:text="@string/game_1"
+            android:textColor="@color/text_main"
+            android:textStyle="bold"
+            app:isGameCompleted="@{unitViewModel.unitProgress.game_1}"
+            app:layout_constraintBottom_toTopOf="@+id/game_2_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dictionary_btn"
+            tools:background="@drawable/main_item" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/game_2_btn"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="8dp"
+            android:letterSpacing="0.1"
+            android:text="@string/game_2"
+            android:textColor="@color/text_main"
+            android:textStyle="bold"
+            app:isGameCompleted="@{unitViewModel.unitProgress.game_2}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/game_1_btn"
+            tools:background="@drawable/main_item_star" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

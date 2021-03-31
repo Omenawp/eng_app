@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- my colors / main-->
+    <color name="white">#FFFFFFFF</color>
+    <color name="violet">#8B9BED</color>
+    <color name="gray">#CBCBCB</color>
+    <color name="pink">#FB6281</color>
+    <color name="green">#BBDF39</color>
+    <color name="text_main">#585858</color>
+    <color name="dictionary">#FF91C1</color>
+</resources>

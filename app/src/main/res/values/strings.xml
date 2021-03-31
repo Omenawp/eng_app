@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">English</string>
+    <string name="greetings">Let\'s learn and play!</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="game_1">Words</string>
+    <string name="game_2">Letters</string>
+    <string name="point_and_repeat">Point and repeat</string>
+    <string name="result_text">Your result is</string>
+    <string name="result_number">%1$d/%2$d</string>
+    <string name="learn_words">Learn:\n\n %1$s</string>
+    <string name="congrats">Congratulation!</string>
+
+    <string name="header_image">Header image cat hello</string>
+    <string name="picture">picture for word</string>
+    <string name="undo">picture for undo</string>
+    <string name="loading">picture for loading</string>
+</resources>
