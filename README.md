@@ -12,4 +12,4 @@ If you make all words right you achive a star. Your result will be saved.
 ## Tech stack
 Kotlin
 
-Navigation Component, Room, DataBinding, Coroutines
+Navigation Component, Room, DataBinding
